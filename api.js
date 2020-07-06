@@ -30,7 +30,7 @@ async function Main() {
   const swaggerOptions = {
     documentationPath: "/",
     info: {
-      title: "API Accounts - #DevFullStakc IGTI",
+      title: "Bank API - #DevFullStack IGTI",
       version: "v1.0",
       contact: {
         name: "Diego Silva",

@@ -107,7 +107,7 @@ export default class AccountRoute extends BaseRoutes {
                 return Boom.preconditionFailed(`It's Bad ${error.message}`);
             }
         },
-        description: "Get todo",
+        description: "Returns balance",
         notes: "Returns balance by the agency and account number  passed in the path",
         tags: ["api"], // ADD THIS TAG
         validate: {
@@ -133,8 +133,8 @@ export default class AccountRoute extends BaseRoutes {
                 return Boom.preconditionFailed(`It's Bad ${error.message}`);
             }
         },
-        description: "Get todo",
-        notes: "Returns balance by the agency and account number  passed in the path",
+        description: "Remove a account by agency and account number",
+        notes: "Remove a account by agency and account number and returns number of account by agency",
         tags: ["api"], // ADD THIS TAG
         validate: {
           params: Joi.object({
