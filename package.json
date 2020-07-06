@@ -7,7 +7,7 @@
     "test": "env-cmd -f ./config/.env.dev mocha src/tests/*.test.js",
     "encrypt:files": "gpg --symmetric --cipher-algo AES256 config/.env.dev",
     "decrypt:files": "chmod u+x decrypt_secret.sh && ./decrypt_secret.sh",    
-    "prod": "cross-env NODE_ENV=prod node api.js",
+    "prod": "cross-env NODE_ENV=dev node api.js",
     "start": "nodemon ."
   },
   "keywords": [],
