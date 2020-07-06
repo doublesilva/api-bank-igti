@@ -1,6 +1,6 @@
-const IDb = require("./interface.db");
+import IDb from "./interface.db.js";
 
-class ContextStrategy extends IDb{
+export default class ContextStrategy extends IDb{
     constructor(database){
         super();
         this._database = database;
@@ -18,6 +18,10 @@ class ContextStrategy extends IDb{
         return this._database.insert(entity);
     }
 
+    insertMany(enities){
+        return this._database.insertMany(enities);
+    }
+
     read(filter){
         return this._database.read(filter);
     }
@@ -29,6 +33,8 @@ class ContextStrategy extends IDb{
     delete(id){
         return this._database.delete(id);
     }
+    
+    deleteMany(filter){
+        return this._database.deleteMany(filter);
+    }
 }
-
-module.exports = ContextStrategy;

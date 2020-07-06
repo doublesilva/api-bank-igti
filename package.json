@@ -5,19 +5,27 @@
   "main": "api.js",
   "scripts": {
     "test": "env-cmd -f ./config/.env.dev mocha src/tests/*.test.js",
-    "start": "node ."
+    "encrypt:files": "gpg --symmetric --cipher-algo AES256 config/.env.dev",
+    "decrypt:files": "chmod u+x decrypt_secret.sh && ./decrypt_secret.sh",    
+    "prod": "cross-env NODE_ENV=prod node api.js",
+    "start": "nodemon ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^6.0.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "hapi": "^18.1.0",
+    "hapi-swagger": "^13.0.2",
     "joi": "^14.3.1",
     "mongoose": "^5.3.11"
   },
   "devDependencies": {
     "mocha": "^8.0.1"
-  }
+  },
+  "type": "module"
 }

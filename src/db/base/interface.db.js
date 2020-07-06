@@ -4,7 +4,7 @@ class NotImplementExceptions extends Error{
     }
 }
 
-class IDb{
+export default class IDb{
     insert(entity){
         throw new NotImplementExceptions();
     }
@@ -23,5 +23,3 @@ class IDb{
 
 
 }
-
-module.exports= IDb;

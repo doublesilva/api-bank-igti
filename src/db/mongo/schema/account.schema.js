@@ -1,12 +1,12 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
- const bankSchema = mongoose.Schema({
+ const AccountSchema = mongoose.Schema({
      agencia:{
-        type: String,
+        type: Number,
         required: true
      },
      conta:{
-        type: String,
+        type: Number,
         required: true
      },
      name:{
@@ -19,4 +19,4 @@ const mongoose = require("mongoose");
      }
  });
 
- module.exports = mongoose.model.accounts || mongoose.model('accounts', bankSchema);
+ export default mongoose.model.accounts || mongoose.model('accounts', AccountSchema);

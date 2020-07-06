@@ -1,0 +1,1 @@
+web: npm run decrypt:files && npm run prod
