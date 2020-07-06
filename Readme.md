@@ -1,7 +1,7 @@
 <h1 align="center">Bank Api - #IGTI</h1>
 
 <h1>
-  <img src="https://ik.imagekit.io/doublesilva/app_heroes_2_zKxBBbXnJ.gif">
+  <img src="bank-api.gif">
 </h1>
 <h3 align="center">
   <a href="https://doublesilva-api-bank-igti.herokuapp.com/">Acesse a aplicação</a>
